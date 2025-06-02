@@ -1,6 +1,6 @@
 <template>
   <aside class="sidebar">
-    <div class="sidebar-header">Menu</div>
+    <div class="sidebar-header">ChessDash</div>
     <nav class="sidebar-nav">
       <a href="#">🏠 Dashboard</a>
       <a href="#">🎮 Games</a>
