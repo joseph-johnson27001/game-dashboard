@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div class="main"></div>
+    <div class="main">
+      <TopNav />
+    </div>
   </div>
 </template>
 
 <script>
+import TopNav from './components/Navigation/TopNav.vue';
+
 export default {
   name: "App",
+  components: {
+    TopNav,
+  }
 };
 </script>
 
@@ -16,6 +23,7 @@ body {
   background-color: rgb(37, 41, 60);
   display: flex;
   justify-content: center;
+  font-family: 'Assistant', sans-serif;
 }
 
 .main {
