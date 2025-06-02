@@ -48,7 +48,4 @@ export default {
   font-size: 1rem;
 }
 
-.sidebar-nav a:hover {
-  text-decoration: underline;
-}
 </style>

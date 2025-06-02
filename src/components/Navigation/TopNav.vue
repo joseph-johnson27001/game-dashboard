@@ -50,7 +50,4 @@ export default {
   font-size: 0.95rem;
 }
 
-.nav-items a:hover {
-  text-decoration: underline;
-}
 </style>
