@@ -36,6 +36,7 @@ export default {
 
 .nav-content {
   margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   color: white;
