@@ -2,7 +2,7 @@
   <nav class="top-nav">
     <div class="nav-content">
       <div class="logo">ChessDash</div>
-      <div class="spacer" />
+      
       <div class="nav-items">
         <a href="#">Home</a>
         <a href="#">Games</a>
@@ -21,16 +21,16 @@ export default {
 
 <style scoped>
 .top-nav {
-  width: 100%;
+  flex-grow: 1;
   padding: 0.75rem 1rem;
 }
 
 .nav-content {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   color: white;
+  justify-content: space-between;
 }
 
 .logo {
