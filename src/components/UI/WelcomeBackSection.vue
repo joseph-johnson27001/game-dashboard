@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-back-section">
-    <h1>Welcome Back, {{ name }}!</h1>
+    <h1>Welcome Back, {{ name }}! <i class="fa-solid fa-chess-rook"></i></h1>
     <p>Good to see you back here. Fancy a game?</p>
   </div>
 </template>
@@ -24,16 +24,25 @@ export default {
 
 <style scoped>
 h1 {
-    color: #ffffff;
-    font-size: 2rem;
-    margin-bottom: 0px;
-    padding-bottom: 5px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.fa-chess-rook {
+  color: gold;
+  margin-left: 4px;
+  font-size: 1.6rem;
+  vertical-align: middle;
 }
 
 p {
-    color: #a1a0b6;
-    padding-top: 5px;
-    margin-top: 0px;
+  color: #a1a0b6;
+  padding-top: 0px;
+  margin-top: 0px;
+  font-weight: 600;
 }
 
 </style>

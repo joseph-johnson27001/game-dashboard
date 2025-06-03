@@ -3,23 +3,29 @@
     <div class="nav-content">
       <!-- Profile photo area -->
       <div class="profile-photo">
-        <img
-          src="https://i.pravatar.cc/40" 
-          alt="User profile"
-          width="35"
-          height="35"
-        />
+        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User profile" width="35" height="35" />
       </div>
 
+      <!-- Icon containers without links -->
       <div class="nav-items">
-        <a href="#">Home</a>
-        <a href="#">Games</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">Profile</a>
+        <div class="nav-icon" title="Home">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="nav-icon" title="Games">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="nav-icon" title="Leaderboard">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <div class="nav-icon" title="Profile">
+          <i class="fas fa-user"></i>
+        </div>
       </div>
     </div>
   </nav>
 </template>
+
+
 
 <script>
 export default {
@@ -37,9 +43,8 @@ export default {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  color: white;
+  color: #a1a0b6;
   justify-content: space-between;
-
 }
 
 .profile-photo img {
@@ -47,13 +52,33 @@ export default {
   object-fit: cover;
   display: block;
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid #a1a0b6;
 }
 
-.nav-items a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-size: 0.95rem;
+.nav-items {
+  display: flex;
+  gap: 0px;
+  align-items: center;
 }
+
+.nav-icon {
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-icon i {
+  color: #a1a0b6;
+  font-size: 1.1rem;
+}
+
+
 </style>
