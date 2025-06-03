@@ -3,7 +3,9 @@
     <SideBar />
     <div class="main">
       <TopNav />
+      <div class="content">
       <WelcomeBackSection />
+      </div>
     </div>
   </div>
 </template>
@@ -38,7 +40,10 @@ body {
 
 .main {
   width: 100%;
-  padding: 15px;
   flex-grow: 1;
+}
+
+.content {
+  padding: 10px 15px;
 }
 </style>

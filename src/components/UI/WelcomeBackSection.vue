@@ -25,18 +25,20 @@ export default {
 <style scoped>
 h1 {
   color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 0px;
   margin-top: 0px;
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .fa-chess-rook {
   color: gold;
-  margin-left: 4px;
-  font-size: 1.6rem;
+  margin-left: 6px;
+  font-size: 1.4rem;
   vertical-align: middle;
 }
 
