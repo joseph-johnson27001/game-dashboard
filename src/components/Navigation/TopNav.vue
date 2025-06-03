@@ -30,18 +30,16 @@ export default {
 <style scoped>
 .top-nav {
   flex-grow: 1;
-  padding: 0.75rem 0;
   background-color: rgb(37, 41, 60);
 }
 
 .nav-content {
   margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   align-items: center;
   color: white;
   justify-content: space-between;
-  max-width: 1200px;
+
 }
 
 .profile-photo img {

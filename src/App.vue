@@ -35,6 +35,7 @@ body {
 
 .main {
   width: 100%;
+  padding: 15px;
   flex-grow: 1;
 }
 </style>
