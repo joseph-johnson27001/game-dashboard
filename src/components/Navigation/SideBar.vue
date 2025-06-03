@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border-right: 1px solid #a1a0b6;
+  border-right: 1px solid #a1a0b66e;
 }
 
 .sidebar-header {

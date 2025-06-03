@@ -41,7 +41,7 @@ export default {
   flex-grow: 1;
   background-color: rgb(37, 41, 60);
   padding-bottom: 5px;
-  border-bottom: 1px solid #a1a0b6;
+  border-bottom: 1px solid #a1a0b66e; 
   padding: 10px 15px;
 }
 
