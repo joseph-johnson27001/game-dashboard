@@ -28,6 +28,8 @@ h1 {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 

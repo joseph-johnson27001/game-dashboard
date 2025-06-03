@@ -3,10 +3,18 @@
     <div class="nav-content">
       <!-- Profile photo area -->
       <div class="profile-photo">
-        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User profile" width="35" height="35" />
+        <span class="profile-wrapper">
+          <img
+            src="https://randomuser.me/api/portraits/women/28.jpg"
+            alt="User profile"
+            width="35"
+            height="35"
+          />
+          <span class="username">joanne01</span>
+        </span>
       </div>
 
-      <!-- Icon containers without links -->
+      <!-- Icon containers -->
       <div class="nav-items">
         <div class="nav-icon" title="Home">
           <i class="fas fa-home"></i>
@@ -25,8 +33,6 @@
   </nav>
 </template>
 
-
-
 <script>
 export default {
   name: "TopNav",
@@ -37,6 +43,7 @@ export default {
 .top-nav {
   flex-grow: 1;
   background-color: rgb(37, 41, 60);
+  margin-bottom: 5px;
 }
 
 .nav-content {
@@ -47,17 +54,28 @@ export default {
   justify-content: space-between;
 }
 
+.profile-photo .profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
 .profile-photo img {
   border-radius: 50%;
   object-fit: cover;
-  display: block;
   cursor: pointer;
-  border: 1px solid #a1a0b6;
+  border: 1px solid #fff;
+  display: block;
+}
+
+.username {
+  color: #fff;
+
 }
 
 .nav-items {
   display: flex;
-  gap: 0px;
+  gap: 0;
   align-items: center;
 }
 
@@ -79,6 +97,4 @@ export default {
   color: #a1a0b6;
   font-size: 1.1rem;
 }
-
-
 </style>
