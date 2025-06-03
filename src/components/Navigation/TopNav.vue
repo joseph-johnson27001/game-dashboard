@@ -63,12 +63,12 @@ export default {
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
-  border: 1px solid #fff;
+  border: 1px solid #f3f3f3;
   display: block;
 }
 
 .username {
-  color: #fff;
+  color: #f3f3f3;
 
 }
 
