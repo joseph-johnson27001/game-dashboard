@@ -3,6 +3,7 @@
     <SideBar />
     <div class="main">
       <TopNav />
+      <WelcomeBackSection />
     </div>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import SideBar from './components/Navigation/SideBar.vue';
 import TopNav from './components/Navigation/TopNav.vue';
+import WelcomeBackSection from './components/UI/WelcomeBackSection.vue';
 
 export default {
   name: "App",
   components: {
     TopNav,
-    SideBar
+    SideBar,
+    WelcomeBackSection
   }
 };
 </script>
