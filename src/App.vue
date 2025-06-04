@@ -5,6 +5,7 @@
       <TopNav />
       <div class="content">
       <WelcomeBackSection />
+      <UserStatistics />
       </div>
     </div>
   </div>
@@ -13,14 +14,16 @@
 <script>
 import SideBar from './components/Navigation/SideBar.vue';
 import TopNav from './components/Navigation/TopNav.vue';
-import WelcomeBackSection from './components/UI/WelcomeBackSection.vue';
+import WelcomeBackSection from './components/Layout/WelcomeBackSection.vue';
+import UserStatistics from './components/Layout/UserStatistics.vue';
 
 export default {
   name: "App",
   components: {
     TopNav,
     SideBar,
-    WelcomeBackSection
+    WelcomeBackSection,
+    UserStatistics,
   }
 };
 </script>
@@ -45,5 +48,9 @@ body {
 
 .content {
   padding: 10px 15px;
+}
+
+p {
+  color: #a1a0b6;
 }
 </style>
