@@ -191,7 +191,8 @@ export default {
 }
 
 .setup-select {
-  background-color: #6366f1;
+  background-color: #3b82f6;
+  
   color: white;
   font-size: 0.75rem;
   padding: 6px 24px 6px 10px; 
@@ -206,7 +207,7 @@ export default {
 }
 
 .setup-select:hover {
-  background-color: #4f46e5;
+  background-color: #2563eb;
 }
 
 .dropdown-icon {
@@ -221,7 +222,7 @@ export default {
 
 
 .play-btn {
-  background-color: #3b82f6;
+  background-color: #6366f1;
   color: white;
   font-size: 0.75rem;
   padding: 6px 14px;
@@ -232,6 +233,6 @@ export default {
 }
 
 .play-btn:hover {
-  background-color: #2563eb;
+  background-color: #4f46e5;
 }
 </style>
