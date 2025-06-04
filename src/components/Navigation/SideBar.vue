@@ -1,22 +1,36 @@
 <template>
-  <aside class="sidebar">
-    <div class="sidebar-header">ChessDash</div>
+  <aside :class="['sidebar', { expanded: isExpanded }]">
+    <div class="sidebar-header">
+      <span class="site-label" v-if="isExpanded">ChessDash</span>
+      <button class="toggle-btn" @click="toggleSidebar" aria-label="Toggle sidebar">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
     <nav class="sidebar-nav">
       <a href="#">
-        <i class="fas fa-home icon blitz"></i>
-        <span class="label">Dashboard</span>
+        <div class="icon-container">
+          <i class="fas fa-home icon blitz"></i>
+        </div>
+        <span class="label" v-if="isExpanded">Dashboard</span>
       </a>
       <a href="#">
-        <i class="fas fa-chess-knight icon bullet"></i>
-        <span class="label">Games</span>
+        <div class="icon-container">
+          <i class="fas fa-chess-knight icon bullet"></i>
+        </div>
+        <span class="label" v-if="isExpanded">Games</span>
       </a>
       <a href="#">
-        <i class="fas fa-chart-line icon rapid"></i>
-        <span class="label">Stats</span>
+        <div class="icon-container">
+          <i class="fas fa-chart-line icon rapid"></i>
+        </div>
+        <span class="label" v-if="isExpanded">Stats</span>
       </a>
       <a href="#">
-        <i class="fas fa-cogs icon puzzles"></i>
-        <span class="label">Settings</span>
+        <div class="icon-container">
+          <i class="fas fa-cogs icon puzzles"></i>
+        </div>
+        <span class="label" v-if="isExpanded">Settings</span>
       </a>
     </nav>
   </aside>
@@ -25,40 +39,59 @@
 <script>
 export default {
   name: "SideBar",
+  data() {
+    return {
+      isExpanded: false,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.isExpanded = !this.isExpanded;
+    },
+  },
 };
 </script>
 
 <style scoped>
 .sidebar {
   width: 45px;
+  transition: width 0.3s ease;
   height: 100dvh;
   background-color: rgb(37, 41, 60);
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0.5rem;
+  padding: 20px 10px;
   border-right: 1px solid #a1a0b66e;
-  transition: width 0.3s ease;
   overflow: hidden;
   position: relative;
 }
 
-.sidebar:hover {
+.sidebar.expanded {
   width: 150px;
 }
 
 .sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: 'Unica One', cursive;
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: #c1bfd6;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  justify-content: center;
 }
 
-.sidebar:hover .sidebar-header {
-  opacity: 1;
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar-nav {
@@ -83,26 +116,20 @@ export default {
   color: #e5e7eb;
 }
 
+/* Fixed size for icons */
+.icon-container {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon {
   font-size: 1.4rem;
-  min-width: 24px;
-  text-align: center;
 }
 
-/* Initially hide labels */
-.label {
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  transform: translateX(-5px);
-}
-
-/* Show labels on hover */
-.sidebar:hover .label {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Color styles from rating cards */
+/* Color styles */
 .blitz {
   color: #facc15;
 }
