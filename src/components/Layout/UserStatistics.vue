@@ -61,14 +61,16 @@ export default {
 .rating-card {
   background-color: rgba(255, 255, 255, 0.03);
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
   color: #a1a0b6;
   transition: background-color 0.2s ease;
+  
 }
 
 .rating-card:hover {
   background-color: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
 }
 
 .icon {

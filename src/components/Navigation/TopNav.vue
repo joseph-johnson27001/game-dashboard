@@ -16,13 +16,13 @@
 
       <!-- Icon containers -->
       <div class="nav-items">
-        <div class="nav-icon" title="Games">
+        <div class="nav-icon games" title="Games">
           <i class="fas fa-gamepad"></i>
         </div>
-        <div class="nav-icon" title="Leaderboard">
+        <div class="nav-icon leaderboard" title="Leaderboard">
           <i class="fas fa-trophy"></i>
         </div>
-        <div class="nav-icon" title="Home">
+        <div class="nav-icon home" title="Home">
           <i class="fas fa-home"></i>
         </div>
       </div>
@@ -40,9 +40,8 @@ export default {
 .top-nav {
   flex-grow: 1;
   background-color: rgb(37, 41, 60);
-  padding-bottom: 5px;
-  border-bottom: 1px solid #a1a0b66e; 
   padding: 10px 15px;
+  border-bottom: 1px solid #a1a0b66e;
 }
 
 .nav-content {
@@ -69,12 +68,10 @@ export default {
 
 .username {
   color: #f3f3f3;
-
 }
 
 .nav-items {
   display: flex;
-  gap: 0;
   align-items: center;
 }
 
@@ -93,7 +90,19 @@ export default {
 }
 
 .nav-icon i {
-  color: #a1a0b6;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+
+.nav-icon.games i {
+  color: #60a5fa;  
+}
+
+.nav-icon.leaderboard i {
+  color: #facc15; 
+}
+
+.nav-icon.home i {
+  color: #d3346c;  
 }
 </style>
