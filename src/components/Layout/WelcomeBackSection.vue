@@ -1,7 +1,6 @@
 <template>
   <div class="welcome-back-section">
     <h1>Welcome Back, {{ name }}! <i class="fa-solid fa-chess-rook"></i></h1>
-    <p>Fancy a game?</p>
   </div>
 </template>
 
@@ -30,7 +29,7 @@ h1 {
   margin-bottom: 0px;
   margin-top: 0px;
   padding-top: 0px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -43,7 +42,6 @@ h1 {
 }
 
 p {
-  color: #a1a0b6;
   padding-top: 0px;
   margin-top: 0px;
   font-weight: 500;
