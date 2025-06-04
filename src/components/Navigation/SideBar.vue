@@ -112,11 +112,6 @@ export default {
   text-decoration: none;
 }
 
-.nav-item:hover,
-.sidebar-nav a:hover {
-  color: #e5e7eb;
-}
-
 .icon-container {
   width: 28px;
   height: 28px;
