@@ -89,6 +89,7 @@ export default {
   border-right: 1px solid #a1a0b66e;
   overflow: hidden;
   position: relative;
+  font-family: "Inter", sans-serif;
 }
 
 .sidebar.expanded {
@@ -103,8 +104,9 @@ export default {
 
 .nav-item,
 .sidebar-nav a {
-  color: rgb(193, 191, 214);
-  font-size: 1rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 100;
   display: flex;
   align-items: center;
   padding: 0.2rem 0.5rem;
