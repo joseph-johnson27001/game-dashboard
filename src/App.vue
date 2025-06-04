@@ -47,7 +47,7 @@ body {
 }
 
 .content {
-  padding: 10px 15px;
+  padding: 15px;
 }
 
 p {

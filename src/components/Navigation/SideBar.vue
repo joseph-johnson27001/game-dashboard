@@ -46,12 +46,6 @@
       </a>
       <a href="#">
         <div class="icon-container">
-          <i class="fas fa-question-circle icon help"></i>
-        </div>
-        <span class="label" :class="{ visible: isExpanded }">Help</span>
-      </a>
-      <a href="#">
-        <div class="icon-container">
           <i class="fas fa-cogs icon puzzles"></i>
         </div>
         <span class="label" :class="{ visible: isExpanded }">Settings</span>
