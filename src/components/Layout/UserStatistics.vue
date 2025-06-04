@@ -19,8 +19,19 @@
 
         <!-- Bottom Row -->
         <div class="bottom-row">
-          <i class="fas fa-cog settings-icon" @click.stop="configure(rating.label)"></i>
-          <button class="play-btn" @click.stop="play(rating.label)">Play</button>
+          <div class="dropdown-wrapper">
+            <select class="setup-select" v-model="rating.selected" @change="configure(rating)">
+              <option
+                v-for="option in getSetupOptions(rating.label)"
+                :key="option"
+                :value="option"
+              >
+                {{ option }}
+              </option>
+            </select>
+            <span class="dropdown-icon">▼</span>
+          </div>
+          <button class="play-btn" @click.stop="play(rating)">Play</button>
         </div>
       </div>
     </div>
@@ -38,34 +49,54 @@ export default {
           icon: "fas fa-bolt",
           score: 1420,
           class: "blitz",
+          selected: "3 | 0",
         },
         {
           label: "Bullet",
           icon: "fas fa-stopwatch",
           score: 1290,
           class: "bullet",
+          selected: "1 | 0",
         },
         {
           label: "Rapid",
           icon: "fas fa-hourglass-half",
           score: 1532,
           class: "rapid",
+          selected: "10 | 0",
         },
         {
           label: "Puzzles",
           icon: "fas fa-puzzle-piece",
           score: 1675,
           class: "puzzles",
+          selected: "Daily Puzzle",
         },
       ],
     };
   },
   methods: {
-    play(mode) {
-      console.log(`Starting ${mode} game...`);
+    getSetupOptions(label) {
+      switch (label) {
+        case "Bullet":
+          return ["1 | 0", "1 | 1", "2 | 1"];
+        case "Blitz":
+          return ["3 | 0", "3 | 2", "5 | 0", "5 | 3"];
+        case "Rapid":
+          return ["10 | 0", "10 | 5", "15 | 10"];
+        case "Puzzles":
+          return ["Daily Puzzle", "Timed", "Survival"];
+        default:
+          return [];
+      }
     },
-    configure(mode) {
-      console.log(`Configure settings for ${mode}...`);
+    configure(rating) {
+      console.log(`Setup selected for ${rating.label}: ${rating.selected}`);
+    },
+    play(rating) {
+      const mode = rating.label;
+      const setup = rating.selected || "default";
+      console.log(`Playing ${mode} with setup: ${setup}`);
     },
   },
 };
@@ -91,23 +122,18 @@ export default {
 }
 
 .rating-card:hover {
-  background-color: rgba(255, 255, 255, 0.07);
-  transform: translateY(-2px);
   cursor: pointer;
 }
 
 .rating-card.blitz {
   box-shadow: inset 0 -6px 10px -11px #facc15;
 }
-
 .rating-card.bullet {
   box-shadow: inset 0 -6px 10px -11px #60a5fa;
 }
-
 .rating-card.rapid {
   box-shadow: inset 0 -6px 10px -11px #34d399;
 }
-
 .rating-card.puzzles {
   box-shadow: inset 0 -10px 10px -11px #f472b6;
 }
@@ -159,16 +185,40 @@ export default {
   margin-top: 1.2rem;
 }
 
-.settings-icon {
-  font-size: 1rem;
-  color: #9ca3af;
-  cursor: pointer;
-  transition: color 0.2s ease;
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-.settings-icon:hover {
-  color: #f3f3f3;
+.setup-select {
+  background-color: #6366f1;
+  color: white;
+  font-size: 0.75rem;
+  padding: 6px 24px 6px 10px; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+  width: auto; 
+  max-width: 100%; 
 }
+
+.setup-select:hover {
+  background-color: #4f46e5;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.6rem;
+  pointer-events: none;
+}
+
 
 .play-btn {
   background-color: #3b82f6;
