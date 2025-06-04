@@ -7,9 +7,20 @@
         class="rating-card"
         :title="rating.label"
       >
-        <i :class="['icon', rating.icon, rating.class]"></i>
-        <div class="label">{{ rating.label }}</div>
-        <div class="score">{{ rating.score }}</div>
+        <!-- Top Row -->
+        <div class="top-row">
+          <div class="left">
+            <i :class="['icon', rating.icon, rating.class]"></i>
+            <span class="label">{{ rating.label }}</span>
+          </div>
+          <div class="score">{{ rating.score }}</div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="bottom-row">
+          <i class="fas fa-cog settings-icon" @click.stop="configure(rating.label)"></i>
+          <button class="play-btn" @click.stop="play(rating.label)">Play</button>
+        </div>
       </div>
     </div>
   </section>
@@ -48,34 +59,55 @@ export default {
       ],
     };
   },
+  methods: {
+    play(mode) {
+      console.log(`Starting ${mode} game...`);
+    },
+    configure(mode) {
+      console.log(`Configure settings for ${mode}...`);
+    },
+  },
 };
 </script>
 
 <style scoped>
 .ratings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
 }
 
 .rating-card {
   background-color: rgba(255, 255, 255, 0.03);
   padding: 1rem;
   border-radius: 8px;
-  text-align: center;
   color: #a1a0b6;
-  transition: background-color 0.2s ease;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .rating-card:hover {
   background-color: rgba(255, 255, 255, 0.07);
+  transform: translateY(-2px);
   cursor: pointer;
 }
 
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .blitz {
@@ -92,13 +124,46 @@ export default {
 }
 
 .label {
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .score {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #ffffff;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.settings-icon {
+  font-size: 1rem;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.settings-icon:hover {
+  color: #f3f3f3;
+}
+
+.play-btn {
+  background-color: #3b82f6;
+  color: white;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.play-btn:hover {
+  background-color: #2563eb;
 }
 </style>
