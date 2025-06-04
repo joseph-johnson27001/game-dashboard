@@ -29,17 +29,21 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+   background-color: rgb(37, 41, 60);
+}
+
 #app {
   display: flex;
   height: 100dvh;
   width: 100%;
   background-color: rgb(37, 41, 60);
+  height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: 'Assistant', sans-serif;
-}
+
 
 .main {
   width: 100%;
