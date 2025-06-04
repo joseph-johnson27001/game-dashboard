@@ -30,7 +30,7 @@
         <div class="icon-container">
           <i class="fas fa-user-friends icon friends"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Friends</span>
+        <span class="label" :class="{ visible: isExpanded }">Social</span>
       </a>
       <a href="#">
         <div class="icon-container">
