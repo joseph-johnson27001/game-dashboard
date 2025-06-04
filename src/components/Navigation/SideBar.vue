@@ -1,7 +1,7 @@
 <template>
   <aside :class="['sidebar', { expanded: isExpanded }]">
     <nav class="sidebar-nav">
-      <div class="nav-item" @click="toggleSidebar" role="button" tabindex="0" aria-label="Toggle sidebar">
+      <div class="nav-item toggle-container" @click="toggleSidebar" role="button" tabindex="0" aria-label="Toggle sidebar">
         <div class="icon-container toggle-btn">
           <i class="fas fa-bars icon"></i>
         </div>
@@ -25,6 +25,30 @@
           <i class="fas fa-chart-line icon rapid"></i>
         </div>
         <span class="label" :class="{ visible: isExpanded }">Stats</span>
+      </a>
+      <a href="#">
+        <div class="icon-container">
+          <i class="fas fa-user-friends icon friends"></i>
+        </div>
+        <span class="label" :class="{ visible: isExpanded }">Friends</span>
+      </a>
+      <a href="#">
+        <div class="icon-container">
+          <i class="fas fa-trophy icon tournaments"></i>
+        </div>
+        <span class="label" :class="{ visible: isExpanded }">Tournaments</span>
+      </a>
+      <a href="#">
+        <div class="icon-container">
+          <i class="fas fa-user-circle icon profile"></i>
+        </div>
+        <span class="label" :class="{ visible: isExpanded }">Profile</span>
+      </a>
+      <a href="#">
+        <div class="icon-container">
+          <i class="fas fa-question-circle icon help"></i>
+        </div>
+        <span class="label" :class="{ visible: isExpanded }">Help</span>
       </a>
       <a href="#">
         <div class="icon-container">
@@ -61,7 +85,7 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
+  padding: 15px 10px;
   border-right: 1px solid #a1a0b66e;
   overflow: hidden;
   position: relative;
@@ -74,12 +98,12 @@ export default {
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-item,
 .sidebar-nav a {
-  color: white;
+  color: rgb(193, 191, 214);
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -105,7 +129,6 @@ export default {
   flex-shrink: 0;
 }
 
-
 .toggle-btn {
   cursor: pointer;
 }
@@ -127,21 +150,46 @@ export default {
   visibility: visible;
 }
 
+.toggle-container {
+  padding-bottom: 0px;
+  color: white;
+}
+
 .sidebar-header {
   font-family: 'Unica one', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+ 
 }
 
 .blitz {
   color: #facc15;
 }
+
 .bullet {
   color: #60a5fa;
 }
+
 .rapid {
   color: #34d399;
 }
+
 .puzzles {
   color: #f472b6;
+}
+
+.friends {
+  color: #f97316;
+}
+
+.tournaments {
+  color: #8b5cf6;
+}
+
+.profile {
+  color: #3b82f6;
+}
+
+.help {
+  color: #6b7280;
 }
 </style>
