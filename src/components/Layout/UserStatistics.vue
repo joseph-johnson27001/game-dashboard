@@ -5,6 +5,7 @@
         v-for="rating in ratings"
         :key="rating.label"
         class="rating-card"
+        :class="rating.class"
         :title="rating.label"
       >
         <!-- Top Row -->
@@ -80,18 +81,35 @@ export default {
 .rating-card {
   background-color: rgba(255, 255, 255, 0.03);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #a1a0b6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: inset 0 -6px 8px -6px transparent;
 }
 
 .rating-card:hover {
   background-color: rgba(255, 255, 255, 0.07);
   transform: translateY(-2px);
   cursor: pointer;
+}
+
+.rating-card.blitz {
+  box-shadow: inset 0 -6px 10px -11px #facc15;
+}
+
+.rating-card.bullet {
+  box-shadow: inset 0 -6px 10px -11px #60a5fa;
+}
+
+.rating-card.rapid {
+  box-shadow: inset 0 -6px 10px -11px #34d399;
+}
+
+.rating-card.puzzles {
+  box-shadow: inset 0 -10px 10px -11px #f472b6;
 }
 
 .top-row {
