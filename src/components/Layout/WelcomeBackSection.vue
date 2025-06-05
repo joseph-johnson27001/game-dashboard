@@ -24,12 +24,12 @@ export default {
 <style scoped>
 h1 {
   color: #f3f3f3;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0px;
   margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
   display: flex;
   align-items: center;
 }

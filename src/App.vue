@@ -32,18 +32,16 @@ export default {
 body {
   margin: 0;
   font-family: 'Assistant', sans-serif;
-   background-color: rgb(37, 41, 60);
+  background-color: rgb(37, 41, 60);
+  min-height: 100dvh;
 }
 
 #app {
   display: flex;
-  height: 100dvh;
+  height: 100%;
   width: 100%;
   background-color: rgb(37, 41, 60);
-  height: 100%;
 }
-
-
 
 .main {
   width: 100%;

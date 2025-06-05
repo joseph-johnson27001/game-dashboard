@@ -40,7 +40,7 @@ export default {
 .top-nav {
   flex-grow: 1;
   background-color: rgb(37, 41, 60);
-  padding: 10px 15px;
+  padding: 11px 15px;
   border-bottom: 1px solid #a1a0b66e;
 }
 

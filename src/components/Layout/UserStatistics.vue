@@ -181,7 +181,7 @@ export default {
 .bottom-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 1.2rem;
 }
 
@@ -192,7 +192,6 @@ export default {
 
 .setup-select {
   background-color: #3b82f6;
-  
   color: white;
   font-size: 0.75rem;
   padding: 6px 24px 6px 10px; 
@@ -224,7 +223,7 @@ export default {
 .play-btn {
   background-color: #6366f1;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   padding: 6px 14px;
   border: none;
   border-radius: 4px;
