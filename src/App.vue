@@ -6,6 +6,7 @@
       <div class="content">
       <WelcomeBackSection />
       <UserStatistics />
+      <GameArea />
       </div>
     </div>
   </div>
@@ -16,6 +17,7 @@ import SideBar from './components/Navigation/SideBar.vue';
 import TopNav from './components/Navigation/TopNav.vue';
 import WelcomeBackSection from './components/Layout/WelcomeBackSection.vue';
 import UserStatistics from './components/Layout/UserStatistics.vue';
+import GameArea from './components/Layout/GameArea.vue';
 
 export default {
   name: "App",
@@ -24,6 +26,7 @@ export default {
     SideBar,
     WelcomeBackSection,
     UserStatistics,
+    GameArea,
   }
 };
 </script>
