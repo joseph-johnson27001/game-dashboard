@@ -93,16 +93,15 @@ export default {
   font-size: 1.3rem;
 }
 
-
 .nav-icon.games i {
-  color: #60a5fa;  
+  color: #60a5fa;
 }
 
 .nav-icon.leaderboard i {
-  color: #facc15; 
+  color: #facc15;
 }
 
 .nav-icon.home i {
-  color: #d3346c;  
+  color: #d3346c;
 }
 </style>

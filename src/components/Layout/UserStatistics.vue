@@ -20,7 +20,11 @@
         <!-- Bottom Row -->
         <div class="bottom-row">
           <div class="dropdown-wrapper">
-            <select class="setup-select" v-model="rating.selected" @change="configure(rating)">
+            <select
+              class="setup-select"
+              v-model="rating.selected"
+              @change="configure(rating)"
+            >
               <option
                 v-for="option in getSetupOptions(rating.label)"
                 :key="option"
@@ -194,15 +198,15 @@ export default {
   background-color: #3b82f6;
   color: white;
   font-size: 0.75rem;
-  padding: 6px 24px 6px 10px; 
+  padding: 6px 24px 6px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   appearance: none;
   outline: none;
   transition: background-color 0.2s ease;
-  width: auto; 
-  max-width: 100%; 
+  width: auto;
+  max-width: 100%;
 }
 
 .setup-select:hover {
@@ -218,7 +222,6 @@ export default {
   font-size: 0.6rem;
   pointer-events: none;
 }
-
 
 .play-btn {
   background-color: #6366f1;

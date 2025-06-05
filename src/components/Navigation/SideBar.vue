@@ -1,11 +1,19 @@
 <template>
   <aside :class="['sidebar', { expanded: isExpanded }]">
     <nav class="sidebar-nav">
-      <div class="nav-item toggle-container" @click="toggleSidebar" role="button" tabindex="0" aria-label="Toggle sidebar">
+      <div
+        class="nav-item toggle-container"
+        @click="toggleSidebar"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle sidebar"
+      >
         <div class="icon-container toggle-btn">
           <i class="fas fa-bars icon"></i>
         </div>
-        <span class="label sidebar-header" :class="{ visible: isExpanded }">ChessDash</span>
+        <span class="label sidebar-header" :class="{ visible: isExpanded }"
+          >ChessDash</span
+        >
       </div>
 
       <a href="#">
@@ -80,6 +88,7 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   padding: 15px 10px;
   border-right: 1px solid #a1a0b66e;
   overflow: hidden;
@@ -148,9 +157,8 @@ export default {
 }
 
 .sidebar-header {
-  font-family: 'Unica one', sans-serif;
+  font-family: "Unica one", sans-serif;
   font-size: 1.4rem;
- 
 }
 
 .blitz {

@@ -10,16 +10,15 @@ export default {
   props: {
     name: {
       type: String,
-      default: "Joanne"
-    }
+      default: "Joanne",
+    },
   },
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
-
 
 <style scoped>
 h1 {
@@ -46,5 +45,4 @@ p {
   margin-top: 0px;
   font-weight: 500;
 }
-
 </style>
