@@ -51,8 +51,6 @@ export default {
 }
 
 .card {
-  padding: 12px;
-  width: 320px;
   border-radius: 8px;
   text-align: center;
 }
