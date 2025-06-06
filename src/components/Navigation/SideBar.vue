@@ -81,10 +81,9 @@ export default {
 <style scoped>
 .sidebar {
   width: 45px;
-  transition: width 0.3s ease;
+  /* transition: width 0.3s ease; */
   min-height: 100dvh;
   height: 100%;
-  background-color: rgb(37, 41, 60);
   color: white;
   display: flex;
   flex-direction: column;
