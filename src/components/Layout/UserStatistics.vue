@@ -109,7 +109,7 @@ export default {
 <style scoped>
 .ratings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
 
@@ -236,5 +236,17 @@ export default {
 
 .play-btn:hover {
   background-color: #4f46e5;
+}
+
+@media (min-width: 640px) {
+  .ratings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ratings-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>
