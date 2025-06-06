@@ -1,6 +1,6 @@
 <template>
   <p>Learning & Tactics</p>
-  <div class="game-area">
+  <div class="learning-area">
     <div class="card" v-for="(game, index) in games" :key="index">
       <ChessBoard :fen="game.fen" />
       <p class="description">{{ game.description }}</p>
@@ -12,7 +12,7 @@
 import ChessBoard from "@/components/Boards/ChessBoard.vue";
 
 export default {
-  name: "GameArea",
+  name: "LearningArea",
   components: {
     ChessBoard,
   },
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped>
-.game-area {
+.learning-area {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
@@ -62,13 +62,13 @@ export default {
 }
 
 @media (min-width: 640px) {
-  .game-area {
+  .learning-area {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .game-area {
+  .learning-area {
     grid-template-columns: repeat(4, 1fr);
   }
 }

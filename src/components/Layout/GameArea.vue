@@ -1,5 +1,5 @@
 <template>
-  <section class="user-statistics">
+  <section class="game-area">
     <p>Jump into a game?</p>
     <div class="ratings-grid">
       <div
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: "UserStatistics",
+  name: "GameArea",
   data() {
     return {
       ratings: [
