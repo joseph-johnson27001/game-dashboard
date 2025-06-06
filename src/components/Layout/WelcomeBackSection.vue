@@ -28,7 +28,7 @@ h1 {
   margin-bottom: 0px;
   margin-top: 0px;
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
   display: flex;
   align-items: center;
 }

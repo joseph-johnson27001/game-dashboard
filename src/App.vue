@@ -5,8 +5,8 @@
       <TopNav />
       <div class="content">
         <WelcomeBackSection />
-        <UserStatistics />
         <GameArea />
+        <LearningArea />
       </div>
     </div>
   </div>
@@ -16,8 +16,8 @@
 import SideBar from "./components/Navigation/SideBar.vue";
 import TopNav from "./components/Navigation/TopNav.vue";
 import WelcomeBackSection from "./components/Layout/WelcomeBackSection.vue";
-import UserStatistics from "./components/Layout/UserStatistics.vue";
 import GameArea from "./components/Layout/GameArea.vue";
+import LearningArea from "./components/Layout/LearningArea.vue";
 
 export default {
   name: "App",
@@ -25,8 +25,8 @@ export default {
     TopNav,
     SideBar,
     WelcomeBackSection,
-    UserStatistics,
     GameArea,
+    LearningArea,
   },
 };
 </script>
@@ -57,6 +57,8 @@ body {
 }
 
 p {
-  color: #a1a0b6;
+  color: #d8d7e5;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 </style>
