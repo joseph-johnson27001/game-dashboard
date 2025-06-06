@@ -43,10 +43,9 @@ export default {
 <style scoped>
 .game-area {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -59,5 +58,17 @@ export default {
   margin-top: 8px;
   font-weight: 600;
   color: #fefefe;
+}
+
+@media (min-width: 640px) {
+  .game-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-area {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>
