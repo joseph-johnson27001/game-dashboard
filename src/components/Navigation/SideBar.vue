@@ -141,7 +141,7 @@ export default {
   margin-left: 8px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
+  /* transition: opacity 0.3s ease; */
   user-select: none;
 }
 
