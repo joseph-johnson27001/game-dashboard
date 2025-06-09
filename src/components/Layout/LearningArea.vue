@@ -56,8 +56,9 @@ export default {
 }
 
 .description {
+  font-family: "Assistant", sans-serif;
   margin-top: 8px;
-  font-weight: 600;
+  font-weight: 400;
   color: #fefefe;
 }
 
