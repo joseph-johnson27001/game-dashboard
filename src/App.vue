@@ -7,6 +7,7 @@
         <WelcomeBackSection />
         <GameArea />
         <LearningArea />
+        <GameHistory />
       </div>
     </div>
   </div>
@@ -18,6 +19,7 @@ import TopNav from "./components/Navigation/TopNav.vue";
 import WelcomeBackSection from "./components/Layout/WelcomeBackSection.vue";
 import GameArea from "./components/Layout/GameArea.vue";
 import LearningArea from "./components/Layout/LearningArea.vue";
+import GameHistory from "./components/Layout/GameHistory.vue";
 
 export default {
   name: "App",
@@ -27,6 +29,7 @@ export default {
     WelcomeBackSection,
     GameArea,
     LearningArea,
+    GameHistory,
   },
 };
 </script>
