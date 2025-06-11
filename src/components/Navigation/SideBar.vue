@@ -96,7 +96,7 @@ export default {
 }
 
 .sidebar.expanded {
-  width: 180px;
+  width: 160px;
 }
 
 .sidebar-nav {
