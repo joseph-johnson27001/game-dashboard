@@ -60,7 +60,7 @@ body {
 }
 
 p {
-  color: #d8d7e5;
+  color: #e7e6f0;
   margin-top: 10px;
   margin-bottom: 10px;
 }
