@@ -1,6 +1,5 @@
 <template>
   <section class="game-area">
-    <p>Jump into a game?</p>
     <div class="ratings-grid">
       <div
         v-for="rating in ratings"
