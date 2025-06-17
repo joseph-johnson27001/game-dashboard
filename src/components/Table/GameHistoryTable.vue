@@ -91,6 +91,11 @@ export default {
   background-color: #1e1e2f;
   border-radius: 8px;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.game-history-table::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .title {

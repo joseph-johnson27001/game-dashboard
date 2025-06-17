@@ -60,6 +60,7 @@ export default {
   margin-top: 8px;
   font-weight: 400;
   color: #fefefe;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 640px) {
