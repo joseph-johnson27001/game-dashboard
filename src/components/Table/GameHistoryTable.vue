@@ -91,11 +91,11 @@ export default {
   background-color: #1e1e2f;
   border-radius: 8px;
   overflow-x: scroll;
-  -ms-overflow-style: none; /* IE 10+ */
+  -ms-overflow-style: none;
 }
 
 .game-history-table::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .title {
@@ -132,6 +132,11 @@ tbody tr:nth-child(even) {
 th {
   font-weight: 600;
   color: #ffffff;
+}
+
+tbody tr:hover {
+  background-color: #3a3a4d;
+  cursor: pointer;
 }
 
 td {
