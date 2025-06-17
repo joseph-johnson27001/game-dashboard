@@ -1,9 +1,9 @@
 <template>
   <div class="chessboard-wrapper">
     <TheChessboard
-      :position="fen"
       :boardWidth="boardSize"
       :boardHeight="boardSize"
+      @boardCreated="onBoardCreated"
     />
   </div>
 </template>
@@ -22,8 +22,15 @@ export default {
   },
   data() {
     return {
-      boardSize: "300px",
+      boardSize: 300,
+      boardAPI: null,
     };
+  },
+  methods: {
+    onBoardCreated(api) {
+      this.boardAPI = api;
+      this.boardAPI.board.set({ fen: this.fen });
+    },
   },
 };
 </script>

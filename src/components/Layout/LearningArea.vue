@@ -20,19 +20,19 @@ export default {
     return {
       games: [
         {
-          fen: "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R",
+          fen: "r1bqkbnr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4",
           description: "Italian Game: Early Development",
         },
         {
-          fen: "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R",
+          fen: "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq c3 0 1",
           description: "English Opening Transition",
         },
         {
-          fen: "r1bqk2r/pppp1ppp/2n2n2/2b1p3/4P3/2NP1N2/PPP2PPP/R1BQKB1R",
+          fen: "rnbq1rk1/ppp1ppbp/3p1np1/4p3/2PP4/2N1PN2/PP2BPPP/R1BQ1RK1 w - - 0 7",
           description: "Classical King's Indian Structure",
         },
         {
-          fen: "r2q1rk1/ppp2ppp/2n2n2/3bp3/3P4/2N1PN2/PPQ2PPP/R1B2RK1",
+          fen: "rnbq1rk1/ppp1bppp/4pn2/2p1B3/2P5/2N1P3/PP3PPP/R2QKBNR w KQ - 0 6",
           description: "Queen's Gambit Declined: Midgame",
         },
       ],
