@@ -24,7 +24,7 @@ export default {
           description: "Italian Game: Early Development",
         },
         {
-          fen: "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq c3 0 1",
+          fen: "rnbqkbnr/pp1ppppp/8/2p5/2P5/8/PP1PPPPP/RNBQKBNR w KQkq c6 0 2",
           description: "English Opening Transition",
         },
         {
