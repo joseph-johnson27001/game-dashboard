@@ -38,7 +38,6 @@ export default {
 <style scoped>
 .chessboard-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
 }
 
 /* BELOW IS COMING FROM THE SVG. IT ORIGINALLY IS SET TO 90VH FOR SOME REASON */
