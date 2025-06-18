@@ -8,6 +8,7 @@
         <GameArea />
         <LearningArea />
         <GameHistory />
+        <FriendArea />
       </div>
     </div>
   </div>
@@ -20,6 +21,7 @@ import WelcomeBackSection from "./components/Layout/WelcomeBackSection.vue";
 import GameArea from "./components/Layout/GameArea.vue";
 import LearningArea from "./components/Layout/LearningArea.vue";
 import GameHistory from "./components/Layout/GameHistory.vue";
+import FriendArea from "./components/Layout/FriendArea.vue";
 
 export default {
   name: "App",
@@ -30,6 +32,7 @@ export default {
     GameArea,
     LearningArea,
     GameHistory,
+    FriendArea,
   },
 };
 </script>
