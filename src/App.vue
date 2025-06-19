@@ -7,8 +7,8 @@
         <WelcomeBackSection />
         <GameArea />
         <LearningArea />
-        <GameHistory />
         <FriendArea />
+        <GameHistory />
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ body {
 
 p {
   color: #e7e6f0;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 10px;
 }
 </style>

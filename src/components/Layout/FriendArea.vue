@@ -1,6 +1,6 @@
 <template>
   <div class="friend-area">
-    <p class="title">Friends</p>
+    <p class="title">Online Friends</p>
     <div class="friend-list">
       <FriendCard
         v-for="(friend, index) in friends"
@@ -81,13 +81,6 @@ export default {
 <style scoped>
 .friend-area {
   margin-top: 10px;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #f0f0f0;
 }
 
 .friend-list {

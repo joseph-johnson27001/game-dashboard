@@ -87,7 +87,7 @@ export default {
 
 <style scoped>
 .game-history-table {
-  padding: 10px;
+  padding: 7px;
   background-color: #1e1e2f;
   border-radius: 8px;
   overflow-x: scroll;
