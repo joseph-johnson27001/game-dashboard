@@ -51,6 +51,14 @@
         <span class="label">Settings</span>
       </a>
     </nav>
+
+    <!-- Logout Button -->
+    <div class="logout-btn">
+      <div class="icon-container">
+        <i class="fas fa-sign-out-alt icon"></i>
+      </div>
+      <span class="label">Logout</span>
+    </div>
   </aside>
 </template>
 
@@ -68,13 +76,13 @@ export default {
   width: 45px;
   height: 100vh;
   background-color: rgb(32, 36, 59);
-
   color: white;
   z-index: 1000;
   overflow: hidden;
   transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* ensures logout stays at bottom */
   padding: 15px 10px;
   border-right: 1px solid #a1a0b66e;
   font-family: "Inter", sans-serif;
@@ -141,7 +149,15 @@ export default {
   font-size: 1.4rem;
 }
 
-/* Colored icons */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 40px 0.5rem;
+  cursor: pointer;
+  color: #d45252;
+  transition: color 0.2s ease;
+}
+
 .blitz {
   color: #facc15;
 }
