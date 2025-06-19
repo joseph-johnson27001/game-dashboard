@@ -67,7 +67,8 @@ export default {
   left: 0;
   width: 45px;
   height: 100vh;
-  background-color: rgb(37, 41, 60);
+  background-color: rgb(32, 36, 59);
+
   color: white;
   z-index: 1000;
   overflow: hidden;
