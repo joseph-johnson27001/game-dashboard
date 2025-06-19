@@ -191,4 +191,10 @@ export default {
 .help {
   color: #6b7280;
 }
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+}
 </style>
