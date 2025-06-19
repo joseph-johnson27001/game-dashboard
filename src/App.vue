@@ -56,6 +56,7 @@ body {
   flex-grow: 1;
   min-width: 0;
   overflow: auto;
+  margin-left: 65px;
 }
 
 .content {
@@ -66,5 +67,11 @@ p {
   color: #e7e6f0;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    margin-left: 0;
+  }
 }
 </style>

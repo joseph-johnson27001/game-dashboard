@@ -1,62 +1,54 @@
 <template>
-  <aside :class="['sidebar', { expanded: isExpanded }]">
+  <aside class="sidebar">
     <nav class="sidebar-nav">
-      <div
-        class="nav-item toggle-container"
-        @click="toggleSidebar"
-        role="button"
-        tabindex="0"
-        aria-label="Toggle sidebar"
-      >
+      <div class="nav-item toggle-container">
         <div class="icon-container toggle-btn">
           <i class="fas fa-bars icon"></i>
         </div>
-        <span class="label sidebar-header" :class="{ visible: isExpanded }"
-          >ChessDash</span
-        >
+        <span class="label sidebar-header">ChessDash</span>
       </div>
 
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-home icon blitz"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Dashboard</span>
+        <span class="label">Dashboard</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-chess-knight icon bullet"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Games</span>
+        <span class="label">Games</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-chart-line icon rapid"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Stats</span>
+        <span class="label">Stats</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-user-friends icon friends"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Social</span>
+        <span class="label">Social</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-trophy icon tournaments"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Tournaments</span>
+        <span class="label">Tournaments</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-user-circle icon profile"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Profile</span>
+        <span class="label">Profile</span>
       </a>
       <a href="#">
         <div class="icon-container">
           <i class="fas fa-cogs icon puzzles"></i>
         </div>
-        <span class="label" :class="{ visible: isExpanded }">Settings</span>
+        <span class="label">Settings</span>
       </a>
     </nav>
   </aside>
@@ -65,38 +57,30 @@
 <script>
 export default {
   name: "SideBar",
-  data() {
-    return {
-      isExpanded: false,
-    };
-  },
-  methods: {
-    toggleSidebar() {
-      this.isExpanded = !this.isExpanded;
-    },
-  },
 };
 </script>
 
 <style scoped>
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 45px;
-  /* transition: width 0.3s ease; */
-  min-height: 100dvh;
-  height: 100%;
+  height: 100vh;
+  background-color: rgb(37, 41, 60);
   color: white;
+  z-index: 1000;
+  overflow: hidden;
+  transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
   padding: 15px 10px;
   border-right: 1px solid #a1a0b66e;
-  overflow: hidden;
-  position: relative;
   font-family: "Inter", sans-serif;
 }
 
-.sidebar.expanded {
-  width: 160px;
+.sidebar:hover {
+  width: 170px;
 }
 
 .sidebar-nav {
@@ -129,10 +113,6 @@ export default {
   flex-shrink: 0;
 }
 
-.toggle-btn {
-  cursor: pointer;
-}
-
 .icon {
   font-size: 1.4rem;
 }
@@ -141,11 +121,11 @@ export default {
   margin-left: 8px;
   opacity: 0;
   visibility: hidden;
-  /* transition: opacity 0.3s ease; */
+  transition: opacity 0.3s ease;
   user-select: none;
 }
 
-.label.visible {
+.sidebar:hover .label {
   opacity: 1;
   visibility: visible;
 }
@@ -156,40 +136,31 @@ export default {
 }
 
 .sidebar-header {
-  font-family: "Unica one", sans-serif;
+  font-family: "Unica One", sans-serif;
   font-size: 1.4rem;
 }
 
+/* Colored icons */
 .blitz {
   color: #facc15;
 }
-
 .bullet {
   color: #60a5fa;
 }
-
 .rapid {
   color: #34d399;
 }
-
 .puzzles {
   color: #f472b6;
 }
-
 .friends {
   color: #f97316;
 }
-
 .tournaments {
   color: #8b5cf6;
 }
-
 .profile {
   color: #3b82f6;
-}
-
-.help {
-  color: #6b7280;
 }
 
 @media screen and (max-width: 500px) {
