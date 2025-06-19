@@ -75,14 +75,14 @@ export default {
   left: 0;
   width: 45px;
   height: 100vh;
-  background-color: rgb(32, 36, 59);
+  background-color: rgb(21, 25, 41);
   color: white;
   z-index: 1000;
   overflow: hidden;
   transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ensures logout stays at bottom */
+  justify-content: space-between;
   padding: 15px 10px;
   border-right: 1px solid #a1a0b66e;
   font-family: "Inter", sans-serif;

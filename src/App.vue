@@ -41,7 +41,7 @@ export default {
 body {
   margin: 0;
   font-family: "Assistant", sans-serif;
-  background-color: rgb(37, 41, 60);
+  background-color: rgb(21, 25, 41);
   min-height: 100dvh;
 }
 
