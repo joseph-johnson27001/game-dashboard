@@ -88,4 +88,16 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
+
+@media (max-width: 1250px) {
+  .friend-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .friend-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 </style>

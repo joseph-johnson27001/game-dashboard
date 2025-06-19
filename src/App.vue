@@ -6,8 +6,8 @@
       <div class="content">
         <WelcomeBackSection />
         <GameArea />
-        <LearningArea />
         <FriendArea />
+        <LearningArea />
         <GameHistory />
       </div>
     </div>
