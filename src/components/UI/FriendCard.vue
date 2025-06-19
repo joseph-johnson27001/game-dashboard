@@ -6,6 +6,11 @@
       <p class="username">@{{ username }}</p>
       <p class="rating">Rating: {{ rating }}</p>
     </div>
+    <div class="actions">
+      <i class="fas fa-chess-board" title="Challenge"></i>
+      <i class="fa fa-gift" title="Send Gift"></i>
+      <i class="far fa-comment-dots" title="Message"></i>
+    </div>
   </div>
 </template>
 
@@ -25,6 +30,7 @@ export default {
 .friend-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #2a2a3d;
   border-radius: 4px;
   padding: 12px;
@@ -44,6 +50,7 @@ export default {
 .info {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .name {
@@ -51,14 +58,26 @@ export default {
   margin: 0;
 }
 
-.username {
+.username,
+.rating {
   font-size: 0.85rem;
   color: #bbb;
   margin: 2px 0;
 }
 
-.rating {
-  font-size: 0.85rem;
-  color: #ccc;
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.actions i {
+  font-size: 18px;
+  color: #aaa;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.actions i:hover {
+  color: #fff;
 }
 </style>
