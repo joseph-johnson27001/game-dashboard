@@ -55,7 +55,7 @@
     <!-- Logout Button -->
     <div class="logout-btn">
       <div class="icon-container">
-        <i class="fas fa-sign-out-alt icon"></i>
+        <i class="fas fa-sign-out-alt icon logout"></i>
       </div>
       <span class="label">Logout</span>
     </div>
@@ -154,7 +154,7 @@ export default {
   align-items: center;
   padding: 0.5rem 0.5rem 40px 0.5rem;
   cursor: pointer;
-  color: #d45252;
+  color: #fff;
   transition: color 0.2s ease;
 }
 
@@ -178,6 +178,9 @@ export default {
 }
 .profile {
   color: #3b82f6;
+}
+.logout {
+  color: #d45252;
 }
 
 @media screen and (max-width: 500px) {
