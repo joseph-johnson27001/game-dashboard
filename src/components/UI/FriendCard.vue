@@ -26,9 +26,10 @@ export default {
   display: flex;
   align-items: center;
   background-color: #2a2a3d;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 12px;
   color: #fff;
+  border: 1px solid #222;
   cursor: pointer;
 }
 
