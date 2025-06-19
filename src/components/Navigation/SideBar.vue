@@ -80,7 +80,7 @@ export default {
 }
 
 .sidebar:hover {
-  width: 170px;
+  width: 180px;
 }
 
 .sidebar-nav {

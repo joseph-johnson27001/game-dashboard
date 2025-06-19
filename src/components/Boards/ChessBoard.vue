@@ -29,7 +29,18 @@ export default {
   methods: {
     onBoardCreated(api) {
       this.boardAPI = api;
-      this.boardAPI.board.set({ fen: this.fen });
+      this.boardAPI.board.set({
+        fen: this.fen,
+        turnColor: null, // disables turn indicator
+        movable: {
+          free: false,
+          color: null,
+          dests: new Map(), // no legal moves
+        },
+        draggable: {
+          enabled: false, // disables drag
+        },
+      });
     },
   },
 };
