@@ -17,7 +17,7 @@
 <script>
 import SideBar from "./components/Navigation/SideBar.vue";
 import TopNav from "./components/Navigation/TopNav.vue";
-import WelcomeBackSection from "./components/Layout/WelcomeBackSection.vue";
+// import WelcomeBackSection from "./components/Layout/WelcomeBackSection.vue";
 import GameArea from "./components/Layout/GameArea.vue";
 import LearningArea from "./components/Layout/LearningArea.vue";
 import GameHistory from "./components/Layout/GameHistory.vue";
@@ -28,7 +28,7 @@ export default {
   components: {
     TopNav,
     SideBar,
-    WelcomeBackSection,
+    // WelcomeBackSection,
     GameArea,
     LearningArea,
     GameHistory,
@@ -64,7 +64,7 @@ body {
 
 p {
   color: #e7e6f0;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 </style>

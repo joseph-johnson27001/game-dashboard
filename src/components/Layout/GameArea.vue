@@ -1,20 +1,20 @@
 <template>
   <section class="game-area">
-    <div class="ratings-grid">
+    <div class="games-grid">
       <div
-        v-for="rating in ratings"
-        :key="rating.label"
-        class="rating-card"
-        :class="rating.class"
-        :title="rating.label"
+        v-for="game in games"
+        :key="game.label"
+        class="game-card"
+        :class="game.class"
+        :title="game.label"
       >
         <!-- Top Row -->
         <div class="top-row">
           <div class="left">
-            <i :class="['icon', rating.icon, rating.class]"></i>
-            <span class="label">{{ rating.label }}</span>
+            <i :class="['icon', game.icon, game.class]"></i>
+            <span class="label">{{ game.label }}</span>
           </div>
-          <div class="score">{{ rating.score }}</div>
+          <div class="score">{{ game.score }}</div>
         </div>
 
         <!-- Bottom Row -->
@@ -22,11 +22,11 @@
           <div class="dropdown-wrapper">
             <select
               class="setup-select"
-              v-model="rating.selected"
-              @change="configure(rating)"
+              v-model="game.selected"
+              @change="configure(game)"
             >
               <option
-                v-for="option in getSetupOptions(rating.label)"
+                v-for="option in getSetupOptions(game.label)"
                 :key="option"
                 :value="option"
               >
@@ -35,7 +35,7 @@
             </select>
             <span class="dropdown-icon">▼</span>
           </div>
-          <button class="play-btn" @click.stop="play(rating)">Play</button>
+          <button class="play-btn" @click.stop="play(game)">Play</button>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
   name: "GameArea",
   data() {
     return {
-      ratings: [
+      games: [
         {
           label: "Blitz",
           icon: "fas fa-bolt",
@@ -94,12 +94,12 @@ export default {
           return [];
       }
     },
-    configure(rating) {
-      console.log(`Setup selected for ${rating.label}: ${rating.selected}`);
+    configure(game) {
+      console.log(`Setup selected for ${game.label}: ${game.selected}`);
     },
-    play(rating) {
-      const mode = rating.label;
-      const setup = rating.selected || "default";
+    play(game) {
+      const mode = game.label;
+      const setup = game.selected || "default";
       console.log(`Playing ${mode} with setup: ${setup}`);
     },
   },
@@ -107,13 +107,13 @@ export default {
 </script>
 
 <style scoped>
-.ratings-grid {
+.games-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
 }
 
-.rating-card {
+.game-card {
   background-color: rgba(255, 255, 255, 0.03);
   padding: 1rem;
   border-radius: 4px;
@@ -125,20 +125,20 @@ export default {
   box-shadow: inset 0 -6px 8px -6px transparent;
 }
 
-.rating-card:hover {
+.game-card:hover {
   cursor: pointer;
 }
 
-.rating-card.blitz {
+.game-card.blitz {
   box-shadow: inset 0 -6px 10px -11px #facc15;
 }
-.rating-card.bullet {
+.game-card.bullet {
   box-shadow: inset 0 -6px 10px -11px #60a5fa;
 }
-.rating-card.rapid {
+.game-card.rapid {
   box-shadow: inset 0 -6px 10px -11px #34d399;
 }
-.rating-card.puzzles {
+.game-card.puzzles {
   box-shadow: inset 0 -10px 10px -11px #f472b6;
 }
 
@@ -239,13 +239,13 @@ export default {
 }
 
 @media (min-width: 640px) {
-  .ratings-grid {
+  .games-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .ratings-grid {
+  .games-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
