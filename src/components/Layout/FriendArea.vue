@@ -89,7 +89,7 @@ export default {
   gap: 12px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1150px) {
   .friend-list {
     grid-template-columns: repeat(2, 1fr);
   }
