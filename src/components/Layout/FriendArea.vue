@@ -95,9 +95,9 @@ export default {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .friend-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>
