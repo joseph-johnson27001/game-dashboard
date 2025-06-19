@@ -117,6 +117,8 @@ export default {
   background-color: rgba(255, 255, 255, 0.03);
   padding: 1rem;
   border-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   color: #a1a0b6;
   display: flex;
   flex-direction: column;
