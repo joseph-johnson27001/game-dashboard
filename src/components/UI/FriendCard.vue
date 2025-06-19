@@ -25,17 +25,16 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .friend-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #2a2a3d;
+  background-color: rgba(255, 255, 255, 0.03);
   border-radius: 4px;
   padding: 12px;
   color: #fff;
-  border: 1px solid #222;
+  border: 1px solid #333;
   cursor: pointer;
 }
 
@@ -73,11 +72,21 @@ export default {
 
 .actions i {
   font-size: 18px;
-  color: #aaa;
-  transition: color 0.2s;
+  transition: transform 0.2s;
   cursor: pointer;
 }
+
+.actions .fa-chess-board {
+  color: #ffb74d;
+}
+.actions .fa-gift {
+  color: #4fc3f7;
+}
+.actions .fa-comment-dots {
+  color: #81c784;
+}
+
 .actions i:hover {
-  color: #fff;
+  transform: scale(1.2);
 }
 </style>
