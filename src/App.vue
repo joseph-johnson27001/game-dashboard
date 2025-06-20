@@ -11,6 +11,7 @@
         <GameHistory />
       </div>
     </div>
+    <DashboardButton />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import GameArea from "./components/Layout/GameArea.vue";
 import LearningArea from "./components/Layout/LearningArea.vue";
 import GameHistory from "./components/Layout/GameHistory.vue";
 import FriendArea from "./components/Layout/FriendArea.vue";
+import DashboardButton from "./components/UI/DashboardButton.vue";
 
 export default {
   name: "App",
@@ -33,6 +35,7 @@ export default {
     LearningArea,
     GameHistory,
     FriendArea,
+    DashboardButton,
   },
 };
 </script>
