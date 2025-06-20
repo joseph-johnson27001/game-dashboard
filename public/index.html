@@ -1,38 +1,96 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link rel="icon" href="/site_logo.png" />
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="A dark-themed, single-page chess dashboard built with Vue. Explore ratings, view game history, and preview an interactive layout for modern chess platforms."
+    />
+    <meta
+      name="keywords"
+      content="chess dashboard, Vue dashboard, chess UI, VueJS templates, game dashboards, dashboard design, chess web app"
+    />
+    <meta name="robots" content="index, follow" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Inter&family=Roboto:wght@300;400;500&family=Unica+One&display=swap"
-    rel="stylesheet" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chess Dashboard Demo" />
+    <meta
+      property="og:description"
+      content="A sleek, dark-themed chess dashboard built with Vue. Features a game area, learning board, history view, and social layout preview."
+    />
+    <meta
+      property="og:image"
+      content="https://templatedashboards.com/Chess-Dashboad-Screenshot.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://templatedashboards.com/dashboards/chess-dashboard"
+    />
 
-  <!-- Font Awesome for icons -->
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chess Dashboard Demo" />
+    <meta
+      name="twitter:description"
+      content="A Vue-based, dark-themed chess dashboard with a modern UI. Perfect for prototyping chess apps or showcasing layout ideas."
+    />
+    <meta
+      name="twitter:image"
+      content="https://templatedashboards.com/Chess-Dashboad-Screenshot.webp"
+    />
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Chess Dashboard Demo",
+        "url": "https://templatedashboards.com/dashboards/chess-dashboard",
+        "description": "A dark-themed, Vue-based chess dashboard demo showcasing layout and interface ideas for chess platforms.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Template Dashboards",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://templatedashboards.com/dashboard-logo.png"
+          }
+        },
+        "image": "https://templatedashboards.com/Chess-Dashboad-Screenshot.webp"
+      }
+    </script>
 
-  <title>ChessDash</title>
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Inter&family=Roboto:wght@300;400;500&family=Unica+One&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="icon" href="/site_logo.png" />
+    <title>Chess Dashboard Demo | Template Dashboards</title>
+  </head>
 
-<body>
-  <noscript>
-    <strong>We're sorry but ChessDash doesn't work properly without JavaScript
-      enabled. Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <!-- built files will be auto injected -->
-</body>
-
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but ChessDash doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
